@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이상형 월드컵</title>
+  </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script type="module" src="./logic.js"></script>
+
+  <style>
+    body {
+      text-align: center;
+      padding: 40px;
+    }
+
+    #title {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    #subtitle {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    #images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #vs {
+      font-size: 24px;
+      margin: 0 24px;
+    }
+
+    #result {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+    }
+
+    #restart {
+      margin-top: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      cursor: pointer;
+      border: 1px solid #000;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  <body>
+    <div id="game">
+      <div id="title">PFP 이상형 월드컵</div>
+      <div id="subtitle">강</div>
+      <div id="images">
+        <img id="left" />
+        <div id="vs">VS</div>
+        <img id="right" />
+      </div>
+      <p id="remaining">남음</p>
+    </div>
+
+    <div id="result">
+      <div id="title">승자!</div>
+      <img id="result-img" />
+      <button id="restart">다시하기</button>
+    </div>
+  </body>
+</html>
